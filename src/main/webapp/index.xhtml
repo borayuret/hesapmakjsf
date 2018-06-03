@@ -6,7 +6,30 @@
         <title>Hesap Makinesi</title>
     </h:head>
     <h:body>
-        Hello from Facelets 2
+        <h1>Hesap Makinesi</h1>
+        <h:form>
+            <div>
+                <h:outputLabel value="Sayı1: "/>
+                <h:inputText value="#{hesapMakinesi.sayi1}"/>                
+            </div>
+            <div>               
+                <h:outputLabel value="Sayı2: "/>   
+                <h:inputText value="#{hesapMakinesi.sayi2}"/>
+            </div>
+            <div>
+                <h:commandButton value="Topla" action="#{hesapMakinesi.topla()}"/>
+                <h:commandButton value="Çıkar" action="#{hesapMakinesi.cikar()}"/>
+                <h:commandButton value="Çarp" action="#{hesapMakinesi.carp()}"/>
+                <h:commandButton value="Böl" action="#{hesapMakinesi.bol()}"/>                
+            </div>
+            <div>
+                <h:outputLabel value="Sonuç: "/>
+                <h:outputText value="#{hesapMakinesi.sonuc}"/>              
+            </div>
+            
+            
+            
+        </h:form>
     </h:body>
 </html>
 
